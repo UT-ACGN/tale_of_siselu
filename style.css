@@ -1,0 +1,70 @@
+html, body { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+
+body {
+  position: relative;
+  margin: 0;
+  height: 100%;
+  font-family: sans-serif;
+  background-color: #eee;
+}
+
+.YananMonogatari {
+  background-color: #fdc565;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .3),
+              0   0 2px rgba(0, 0, 0, .4);
+}
+.YananMonogatari h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  min-height: 10rem;
+  max-height: 30rem;
+  margin: 0;
+  font-size: 4rem;
+}
+
+ul.nav {
+  width: 100%;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+ul.nav li {
+  flex-grow: 1;
+  position: relative;
+  list-style-type: none;
+}
+ul.nav li a {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: .5rem;
+  color: rgba(0, 0, 0, .87);
+  background-color: #f6b763;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.3em;
+  font-variant: small-caps;
+}
+ul.nav li a:hover {
+  opacity: .7;
+}
+
+main {
+  width: 60vw;
+  min-width: 30rem;
+  max-width: 80rem;
+  margin: 16px auto;
+  padding: .2rem 3rem;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+}
+
+p {
+  text-indent: 2.2em;
+  line-height: 2.2em;
+  letter-spacing: .1em;
+  margin: 2.2em 0;
+}
