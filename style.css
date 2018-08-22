@@ -10,7 +10,7 @@ body {
 }
 
 .YananMonogatari {
-  background-color: #fdc565;
+  background-color: #af8f61;
   box-shadow: 0 3px 5px rgba(0, 0, 0, .3),
               0   0 2px rgba(0, 0, 0, .4);
 }
@@ -23,6 +23,7 @@ body {
   max-height: 30rem;
   margin: 0;
   font-size: 4rem;
+  color: rgb(255, 255, 255);
 }
 
 ul.nav {
@@ -41,15 +42,21 @@ ul.nav li a {
   justify-content: center;
   width: 100%;
   padding: .5rem;
-  color: rgba(0, 0, 0, .87);
-  background-color: #f6b763;
   text-decoration: none;
   font-weight: 700;
   font-size: 1.3em;
   font-variant: small-caps;
+  background-color: rgb(126, 98, 54);
+  color: rgba(255, 255, 255, .8);
 }
 ul.nav li a:hover {
-  opacity: .7;
+  background-color: rgba(126, 98, 54, .8);
+  color: rgb(255, 255, 255);
+}
+ul.nav li a.-coming-soon {
+  background-color: rgb(126, 98, 54);
+  color: rgba(255, 255, 255, .38);
+  cursor: default;
 }
 
 main {
