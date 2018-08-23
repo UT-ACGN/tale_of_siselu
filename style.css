@@ -25,6 +25,11 @@ body {
   font-size: 4rem;
   color: rgb(255, 255, 255);
 }
+.YananMonogatari h1 .logo {
+  height: 70%;
+  color: black;
+  filter: invert(1);
+}
 
 ul.nav {
   width: 100%;
