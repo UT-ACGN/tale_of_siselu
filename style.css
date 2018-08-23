@@ -9,12 +9,12 @@ body {
   background-color: #eee;
 }
 
-.YananMonogatari {
+header.YananMonogatari {
   background-color: #af8f61;
   box-shadow: 0 3px 5px rgba(0, 0, 0, .3),
               0   0 2px rgba(0, 0, 0, .4);
 }
-.YananMonogatari h1 {
+header.YananMonogatari h1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,7 +25,7 @@ body {
   font-size: 4rem;
   color: rgb(255, 255, 255);
 }
-.YananMonogatari h1 .logo {
+header.YananMonogatari h1 .logo {
   height: 70%;
   color: black;
   filter: invert(1);
@@ -62,6 +62,15 @@ ul.nav li a.-coming-soon {
   background-color: rgb(126, 98, 54);
   color: rgba(255, 255, 255, .38);
   cursor: default;
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  background-color: rgb(126, 98, 54);
+  color: rgba(255, 255, 255, .8);
+  box-shadow: 0 -3px 5px rgba(0, 0, 0, .3),
+              0    0 2px rgba(0, 0, 0, .4);
 }
 
 main {
