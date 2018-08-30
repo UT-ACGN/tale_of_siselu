@@ -5,7 +5,7 @@ body {
   position: relative;
   margin: 0;
   height: 100%;
-  font-family: sans-serif;
+  font-family: 'Noto Sans CJK TC', 'PingFang TC', 'Heiti TC', 'Microsoft JhengHei', Helvetica, Segoe UI, Arial, sans-serif;
   background-color: #eee;
 }
 
@@ -93,9 +93,9 @@ p {
 
 /* character */
 .character-group .character-group-name {
-  margin: 2.2rem 0;
+  margin: 4.4rem 0 2.2rem;
   padding: 0 3rem;
-  font-size: 3rem;
+  font-size: 2.8rem;
   color: rgb(126, 98, 54);
 }
 
@@ -105,7 +105,6 @@ p {
   align-items: center;
   position: relative;
   margin: 2.2rem 0;
-  padding: 1rem 0;
   background-image: linear-gradient(90deg,
     transparent, #ffecb3 25%, #ffecb3 75%, transparent);
   background-size: 100% 75%;
@@ -128,22 +127,32 @@ p {
   font-size: 1.7rem;
   letter-spacing: 5px;
   color: white;
-  text-shadow:  2px 0   3px var(--b),
-               -2px 0   3px var(--b),
-                0   2px 3px var(--b),
-                0  -2px 3px var(--b);
+  text-shadow:  2px 0   5px var(--saying-color),
+               -2px 0   5px var(--saying-color),
+                0   2px 5px var(--saying-color),
+                0  -2px 5px var(--saying-color);
   transform: rotate(-9deg) translateX(-2rem) translateX(-50%) translateY(-50%);
+}
+.character .picture .saying .normal {
+  letter-spacing: initial;
+}
+.character .picture .saying .break-vertical {
+  writing-mode: initial;
+  font-size: .8em;
 }
 
 .character .intro {
   flex-grow: 1;
-  margin-left: 1rem;
 }
 .character .intro .name {
-  padding: 0 2rem;
+  margin: 1rem 0;
+  padding-left: 2rem;
   font-size: 2rem;
-  background-image: linear-gradient(90deg, var(--a) 75%, transparent);
+  background-image: linear-gradient(90deg, var(--name-color) 75%, transparent);
   color: white;
+}
+.character .intro dl.data {
+  margin: 1rem 0;
 }
 .character .intro dl.data dt, .character .intro dl.data dd {
   display: inline-block;
@@ -155,6 +164,6 @@ p {
 }
 .character .intro p {
   text-indent: 0;
-  margin: 0;
+  margin: 1rem 0;
 }
 
