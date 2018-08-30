@@ -29,14 +29,16 @@ header.YananMonogatari h1 {
   color: rgb(255, 255, 255);
 }
 header.YananMonogatari h1 .logo {
-  height: 70%;
+  max-width: 100%;
+  max-height: 70%;
   color: black;
   filter: invert(1);
 }
 
 ul.nav {
-  width: 100%;
   display: flex;
+  width: 100%;
+  overflow-x: auto;
   margin: 0;
   padding: 0;
 }
@@ -48,8 +50,7 @@ ul.nav li {
 ul.nav li a {
   display: flex;
   justify-content: center;
-  width: 100%;
-  padding: .5rem;
+  padding: .5rem 1rem;
   text-decoration: none;
   font-weight: 700;
   font-size: 1.3em;
@@ -72,7 +73,7 @@ ul.nav li a.-coming-soon {
 }
 
 footer {
-  padding: 1rem;
+  padding: 1rem 0;
   text-align: center;
   background-color: rgb(126, 98, 54);
   color: rgba(255, 255, 255, .8);
@@ -81,28 +82,37 @@ footer {
 }
 
 main {
-  width: 60vw;
-  min-width: 30rem;
-  max-width: 80rem;
+  width: 50rem;
+  min-width: 60vw;
+  max-width: 100vw;
   margin: 16px auto;
-  padding: .2rem 3rem;
+  padding: .2rem 3.6rem;
   background-color: #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+}
+@media (max-width: 500px) {
+  main {
+    padding: .2rem .9rem;
+  }
 }
 
 p {
   text-indent: 2.2em;
-  line-height: 2.2em;
+  line-height: 1.8em;
   letter-spacing: .1em;
-  margin: 2.2em 0;
+  margin: 1.8em 0;
 }
+
 
 /* character */
 .character-group .character-group-name {
-  margin: 4.4rem 0 2.2rem;
-  padding: 0 3rem;
+  margin: 3.6rem 0 1.8px;
+  padding: 0;
   font-size: 2.8rem;
   color: rgb(126, 98, 54);
+}
+.character-group .character-group-name:first-child {
+  margin-top: 1.8rem;
 }
 
 .character {
@@ -110,12 +120,17 @@ p {
   justify-content: center;
   align-items: center;
   position: relative;
-  margin: 2.2rem 0;
+  margin: 1.8rem 0 2.7rem;
   background-image: linear-gradient(90deg,
     transparent, #ffecb3 25%, #ffecb3 75%, transparent);
   background-size: 100% 75%;
   background-repeat: no-repeat;
   background-position: center;
+}
+@media (max-width: 800px) {
+  .character {
+    flex-direction: column;
+  }
 }
 
 .character .picture {
@@ -151,25 +166,25 @@ p {
   flex-grow: 1;
 }
 .character .intro .name {
-  margin: 1rem 0;
-  padding-left: 2rem;
+  margin: .9rem 0;
+  padding-left: 1.1rem;
   font-size: 2rem;
   background-image: linear-gradient(90deg, var(--name-color) 75%, transparent);
   color: white;
 }
 .character .intro dl.data {
-  margin: 1rem 0;
+  margin: .9rem 0;
 }
 .character .intro dl.data dt, .character .intro dl.data dd {
   display: inline-block;
   margin: 0;
-  line-height: 2.2em;
+  line-height: 1.8em;
 }
 .character .intro dl.data dt::after {
   content: '：';
 }
 .character .intro p {
   text-indent: 0;
-  margin: 1rem 0;
+  margin: .9rem 0;
 }
 
