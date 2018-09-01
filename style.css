@@ -158,7 +158,7 @@ main article .article-author {
   writing-mode: vertical-rl;
   white-space: nowrap;
   font-size: 1.7rem;
-  letter-spacing: .2em;
+  letter-spacing: .1em;
   color: white;
   text-shadow:  2px 0   5px var(--saying-color),
                -2px 0   5px var(--saying-color),
