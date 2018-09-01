@@ -82,39 +82,51 @@ footer {
 }
 
 main {
-  width: 50rem;
-  min-width: 60vw;
+  width: 60.5rem;
   max-width: 100vw;
   margin: 16px auto;
-  padding: .2rem 3.6rem;
+  padding: .2rem 3.3rem;
+  line-height: 1.8em;
+  letter-spacing: .1em;
   background-color: #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
 }
 @media (max-width: 500px) {
   main {
-    padding: .2rem .9rem;
+    padding: .2rem 1.1rem;
   }
 }
 
-p {
+main p {
   text-indent: 2.2em;
-  line-height: 1.8em;
-  letter-spacing: .1em;
-  margin: 1.8em 0;
+  margin: 0;
+}
+main p:first-child {
+  margin-top: 1.8rem;
+}
+main p:last-child {
+  margin-bottom: 1.8rem;
+}
+main h1 {
+  margin: 1.8rem 0 0;
+  font-size: 2.5rem;
+  line-height: 3.6rem;
+  color: rgb(126, 98, 54);
+}
+main hr {
+  margin: 1.8rem 0 0;
+  border: none;
+}
+main article h1 {
+  font-size: 2rem;
+}
+main article .article-author {
+  display: block;
+  text-align: right;
 }
 
 
 /* character */
-.character-group .character-group-name {
-  margin: 3.6rem 0 1.8px;
-  padding: 0;
-  font-size: 2.8rem;
-  color: rgb(126, 98, 54);
-}
-.character-group .character-group-name:first-child {
-  margin-top: 1.8rem;
-}
-
 .character {
   display: flex;
   justify-content: center;
@@ -146,7 +158,7 @@ p {
   writing-mode: vertical-rl;
   white-space: nowrap;
   font-size: 1.7rem;
-  letter-spacing: 5px;
+  letter-spacing: .2em;
   color: white;
   text-shadow:  2px 0   5px var(--saying-color),
                -2px 0   5px var(--saying-color),
@@ -168,6 +180,7 @@ p {
 .character .intro .name {
   margin: .9rem 0;
   padding-left: 1.1rem;
+  letter-spacing: initial;
   font-size: 2rem;
   background-image: linear-gradient(90deg, var(--name-color) 75%, transparent);
   color: white;
@@ -178,7 +191,6 @@ p {
 .character .intro dl.data dt, .character .intro dl.data dd {
   display: inline-block;
   margin: 0;
-  line-height: 1.8em;
 }
 .character .intro dl.data dt::after {
   content: '：';
