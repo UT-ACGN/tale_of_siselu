@@ -182,7 +182,7 @@ main article .article-author {
   padding-left: 1.1rem;
   letter-spacing: initial;
   font-size: 2rem;
-  background-image: linear-gradient(90deg, var(--name-color) 75%, transparent);
+  background-image: linear-gradient(90deg, var(--name-color-l), var(--name-color-r));
   color: white;
 }
 .character .intro dl.data {
