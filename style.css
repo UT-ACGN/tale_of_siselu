@@ -179,8 +179,10 @@ main article .article-author {
   top: 50%;
   writing-mode: vertical-rl;
   white-space: nowrap;
+  text-align: left;
   font-size: 1.7rem;
   letter-spacing: .1em;
+  text-indent: -1.1em;
   color: white;
   text-shadow:  2px 0   5px var(--saying-color),
                -2px 0   5px var(--saying-color),
