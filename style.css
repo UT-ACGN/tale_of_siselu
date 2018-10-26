@@ -196,6 +196,7 @@ main article .article-author {
 .character .picture .saying .break-vertical {
   writing-mode: initial;
   font-size: .8em;
+  text-indent: 0;
 }
 
 .character .intro {
@@ -222,5 +223,19 @@ main article .article-author {
 .character .intro p {
   text-indent: 0;
   margin: .9rem 0;
+}
+
+
+/* story */
+input.article-control {
+  position: fixed;
+  top: -100%;
+  visibility: hidden;
+}
+article.close {
+  display: none;
+}
+input.article-control:checked + article.close {
+  display: unset;
 }
 
