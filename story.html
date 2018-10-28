@@ -47,12 +47,14 @@
 </header>
 
 <main>
-  <ul>
-    <li><label for="a1">1</label></li>
-    <li><label for="a2">2</label></li>
+  <input type="radio" class="article-control" name="article" id="a-1" checked>
+  <input type="radio" class="article-control" name="article" id="a-2">
+  <ul class="article-controller">
+    <li><label class="button" id="btn-1" for="a-1">旅途的開始</label></li>
+    <li><label class="button" id="btn-2" for="a-2">山吹</label></li>
   </ul>
-  <input type="radio" class="article-control" name="article" id="a1" checked>
-  <article class="close">
+  
+  <article id="article-1">
     <header>
       <h1>旅途的開始</h1>
       <span class="article-author">文：藍淚</span>
@@ -103,8 +105,7 @@
     <p>提起筆，將自己一路從瑯琊半島到覺羅國，最後到羅莎莉亞的種種寫進給母親的信中。我曾經有很多朋友，未來也會遇到新的朋友吧？但我仍舊想留住那些曾經一起奮鬥的夥伴……
   </article>
   
-  <input type="radio" class="article-control" name="article" id="a2">
-  <article class="close">
+  <article id="article-2">
     <header>
       <h1>山吹</h1>
       <span class="article-author">文：鳴弦＠■■■■■的信徒</span>
