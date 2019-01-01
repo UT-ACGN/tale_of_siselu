@@ -181,7 +181,7 @@ main article aside {
   flex: 1;
   height: 400px;
 }
-@media (max-width: 600px) {
+@media (max-width: 720px) {
   .social {
     flex-direction: column;
   }
