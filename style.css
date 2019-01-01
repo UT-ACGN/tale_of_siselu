@@ -98,6 +98,17 @@ main {
   }
 }
 
+main .full-width {
+  margin: 0.9rem -3.3rem;
+  padding: 0.9rem 3.3rem;
+}
+@media (max-width: 500px) {
+  main .full-width {
+    margin: 0.9rem -1.1rem;
+    padding: 0.9rem 1.1rem;
+  }
+}
+
 main p {
   text-indent: 2.2em;
   margin: 0;
@@ -115,8 +126,12 @@ main h1 {
   color: rgb(126, 98, 54);
 }
 main hr {
-  margin: 1.8rem 0 0;
+  margin: 0.9rem 0;
   border: none;
+  text-align: center;
+}
+main hr.big::before {
+  content: '＊　＊　＊　＊　＊';
 }
 main article h1 {
   font-size: 2rem;
@@ -124,6 +139,13 @@ main article h1 {
 main article .article-author {
   display: block;
   text-align: right;
+}
+main article i {
+  font-style: normal;
+  color: rgba(126, 98, 54, .7);
+}
+main article aside {
+  background-color: rgba(175, 143, 97, .3);
 }
 
 
@@ -252,6 +274,7 @@ ul.article-controller .button {
   background-color: rgb(126, 98, 54);
   color: rgba(255, 255, 255, .8);
   white-space: nowrap;
+  cursor: pointer;
 }
 ul.article-controller .button::before,
 ul.article-controller .button::after {
@@ -282,6 +305,8 @@ input.article-control {
 }
 #a-1:checked ~ #article-1 { display: unset; }
 #a-2:checked ~ #article-2 { display: unset; }
+#a-3:checked ~ #article-3 { display: unset; }
 #a-1:checked ~ .article-controller #btn-1 { background-color: #af8f61; }
 #a-2:checked ~ .article-controller #btn-2 { background-color: #af8f61; }
+#a-3:checked ~ .article-controller #btn-3 { background-color: #af8f61; }
 
