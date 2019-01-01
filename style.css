@@ -158,18 +158,32 @@ main article aside {
   padding: 0.9rem 0;
   font-family: 'Noto Serif CJK TC', 'Yu Mincho', 'YuMincho', serif;
   font-weight: 700;
-  font-size: 1.5rem;
-  line-height: 1.4em;
+  font-size: 1.3rem;
   text-align: center;
   text-indent: 0;
 }
 @media (max-width: 600px) {
   .small-introduction p {
     font-size: 3.7vw;
-    line-height: 1.4em;
+    line-height: 1.3em;
   }
 }
 
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 1.8rem 0 2.7rem;
+}
+.social div {
+  margin: 1.1rem;
+}
+@media (max-width: 600px) {
+  .social {
+    flex-direction: column;
+  }
+}
 
 /* character */
 .character {
