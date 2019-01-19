@@ -322,7 +322,9 @@ input.article-control {
 #a-1:checked ~ #article-1 { display: unset; }
 #a-2:checked ~ #article-2 { display: unset; }
 #a-3:checked ~ #article-3 { display: unset; }
+#a-4:checked ~ #article-4 { display: unset; }
 #a-1:checked ~ .article-controller #btn-1 { background-color: #af8f61; }
 #a-2:checked ~ .article-controller #btn-2 { background-color: #af8f61; }
 #a-3:checked ~ .article-controller #btn-3 { background-color: #af8f61; }
+#a-4:checked ~ .article-controller #btn-4 { background-color: #af8f61; }
 
