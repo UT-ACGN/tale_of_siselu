@@ -72,7 +72,7 @@ function initPOP() {
   let POPnext = POP.querySelector('.pop-control .pop-next');
   
   POP.addEventListener('click', e => {
-    if (e.target === POP)
+    if (e.target !== POPprev && e.target !== POPnext)
       POP.classList.add('-hide');
   });
   POPprev.addEventListener('click', e => changePOP(e.target.dataset.imgName));
@@ -82,18 +82,16 @@ function initPOP() {
 function changePOP(imgName) {
   if (imgName === '') return;
   
-  let POP = document.querySelector('#POP');
-  POP.classList.remove('-hide');
   let index = imgNameList.indexOf(imgName);
-  
+  let POP = document.querySelector('#POP');
   let POPimg = POP.querySelector('img.pop-img');
-  POPimg.setAttribute('src', `./image/CG/${imgName}_big.png`);
-  
   let POPnum = POP.querySelector('.pop-control .pop-num');
-  POPnum.innerHTML = (index + 1) + ' / ' + imgNameList.length;
-  
   let POPprev = POP.querySelector('.pop-control .pop-prev');
   let POPnext = POP.querySelector('.pop-control .pop-next');
+  
+  POP.classList.remove('-hide');
+  POPimg.setAttribute('src', `./image/CG/${imgName}_big.png`);
+  POPnum.innerHTML = (index + 1) + ' / ' + imgNameList.length;
   if (index === 0) {
     POPprev.classList.add('-disable');
     POPprev.dataset.imgName = '';
