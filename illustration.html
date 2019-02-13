@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>夜楠物語：插圖</title>
+  <meta name="description" content="臺北市立大學 ACGN 研究社 106 學年度社刊：台式 × 和風 × 奇幻 × 蒸汽龐克 × 大正浪漫">
+  <meta name="author" content="臺北市立大學 ACGN 研究社">
+  <meta name="copyright" content="臺北市立大學 ACGN 研究社">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="《夜楠物語》插圖">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ut-acgn.github.io/tale_of_siselu/story">
+  <meta property="og:image" content="https://ut-acgn.github.io/tale_of_siselu/image/Siselu_logo_color_500x250.png">
+  <meta property="og:image:width" content="500">
+  <meta property="og:image:height" content="250">
+  <meta property="og:site_name" content="夜楠物語 Tale of Siselu">
+  <meta property="og:description" content="臺北市立大學 ACGN 研究社 106 學年度社刊：台式 × 和風 × 奇幻 × 蒸汽龐克 × 大正浪漫">
+  <!-- Twitter Card -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:site" content="@taleofsiselu">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="YananMonogatari">
+  <h1>
+    <img src="./image/Siselu_logo_1000x500.png" alt="夜楠物語 Tale of Siselu"
+         class="logo">
+    <span>插圖</span>
+  </h1>
+  <nav>
+    <ul class="nav">
+      <li><a href="./">Home</a></li>
+      <!-- <li><a href="#" class="-coming-soon">News</a></li> -->
+      <li><a href="./introduction">Introduction</a></li>
+      <li><a href="./character">Character</a></li>
+      <li><a href="./story">Story</a></li>
+      <li><a href="#" class="-now-at">Illustration</a></li>
+      <li><a href="#" class="-coming-soon">World</a></li>
+      <!-- <li><a href="#" class="-coming-soon">Goods</a></li> -->
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <article id="img-grid">
+  </article>
+  <div id="POP" class="-hide">
+    <div class="pop-box"><img class='pop-img' src="#">
+      <div class='pop-control'>
+        <div class="pop-prev"></div>
+        <div class="pop-num"></div>
+        <div class="pop-next"></div>
+      </div>
+    </div>
+  </div>
+  <script>
+let imgNameList = [
+  'mynameis',
+  'sleep',
+  'onsen',
+  'window'
+];
+
+function initPOP() {
+  let POP = document.querySelector('#POP');
+  let POPprev = POP.querySelector('.pop-control .pop-prev');
+  let POPnext = POP.querySelector('.pop-control .pop-next');
+  
+  POP.addEventListener('click', e => {
+    if (e.target === POP)
+      POP.classList.add('-hide');
+  });
+  POPprev.addEventListener('click', e => changePOP(e.target.dataset.imgName));
+  POPnext.addEventListener('click', e => changePOP(e.target.dataset.imgName));
+}
+
+function changePOP(imgName) {
+  if (imgName === '') return;
+  
+  let POP = document.querySelector('#POP');
+  POP.classList.remove('-hide');
+  let index = imgNameList.indexOf(imgName);
+  
+  let POPimg = POP.querySelector('img.pop-img');
+  POPimg.setAttribute('src', `./image/CG/${imgName}_big.png`);
+  
+  let POPnum = POP.querySelector('.pop-control .pop-num');
+  POPnum.innerHTML = (index + 1) + ' / ' + imgNameList.length;
+  
+  let POPprev = POP.querySelector('.pop-control .pop-prev');
+  let POPnext = POP.querySelector('.pop-control .pop-next');
+  if (index === 0) {
+    POPprev.classList.add('-disable');
+    POPprev.dataset.imgName = '';
+  } else {
+    POPprev.classList.remove('-disable');
+    POPprev.dataset.imgName = imgNameList[index - 1];
+  }  
+  if (index === imgNameList.length - 1) {
+    POPnext.classList.add('-disable');
+    POPnext.dataset.imgName = '';
+  } else {
+    POPnext.classList.remove('-disable');
+    POPnext.dataset.imgName = imgNameList[index + 1];
+  }
+}
+
+window.onload = function () {
+    initPOP();
+    
+    let ImgGrid = document.querySelector('#img-grid');
+    for (let imgName of imgNameList) {
+      let Img = document.createElement('img');
+      Img.setAttribute('src', `./image/CG/${imgName}_small.png`);
+      Img.addEventListener('click', e => changePOP(imgName));
+      ImgGrid.appendChild(Img);
+    }
+};
+  </script>
+</main>
+
+<footer>
+Copyright &copy; 2019 臺北市立大學 ACGN 研究社
+</footer>
+
+</body>
+</html>

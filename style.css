@@ -344,3 +344,66 @@ input.article-control {
 #a-3:checked ~ .article-controller #btn-3 { background-color: #af8f61; }
 #a-4:checked ~ .article-controller #btn-4 { background-color: #af8f61; }
 
+/* illustration */
+#img-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 15rem);
+  grid-column-gap: 0.5rem;
+  grid-row-gap: 0.5rem;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  margin: 1.8rem;
+}
+#img-grid img {
+  width: 15rem;
+  cursor: pointer;
+}
+
+#POP {
+  position: fixed;
+  width: 100vw; height: 100vh;
+  top: 0; bottom: 0; right: 0; left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(170, 170, 170, .75);
+  z-index: 100;
+}
+#POP.-hide { display: none; }
+.pop-box {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(126, 98, 54, .75);
+}
+.pop-control {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+}
+.pop-prev, .pop-next {
+  padding: .5rem 2rem;
+  cursor: pointer;
+}
+.pop-prev.-disable, .pop-next.-disable {
+  pointer-events: none;
+  cursor: default;
+  opacity: .25;
+}
+.pop-prev::before { display: block; content: '⇐'; }
+.pop-next::before { display: block; content: '⇒'; }
+.pop-num {
+  flex: 1;
+  pointer-events: none;
+}
+img.pop-img {
+  display: block;
+  max-width: 90vw;
+  max-height: 80vh;
+}
+@media screen and (max-width: 800px) {
+  img.pop-img { max-width: 100vw; }
+}
+
